@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  
+<meta http-equiv="content-type" content="text/html;charset=windows-1251" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Badaev&Co</title>
+    <link rel="icon" type="image/png" href="../png/favicon.png">
+    <link rel="apple-touch-icon" href="../png/apple-touch-favicon.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../css/owl.theme.default.min.css">    
+    <link rel="stylesheet" href="../css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/jquery-confirm.min.css">
+    <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter40872654 = new Ya.Metrika2({ id:40872654, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "../js/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="../gif/1.gif" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="../other/js0a7c?id=UA-32531372-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-32531372-1');
+    </script>
+  </head>
+
+  <body>
+
+    <main role="main" id="main">
+      <div>
+        <iframe id="site-box" src="law-5.html" frameborder="0"  width="900" height="1500"></iframe>
+      </div>
+    </main>
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script src="../js/jquery-3.3.1.min.js" ></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery-confirm.min.js"></script>
+
+    <style type="text/css">
+      body{
+        background: #eaeaea;
+      }
+      #footer{
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        bottom: 0px;
+        left: 0px;
+        background: #0674ec;
+        color: #fff;
+        overflow: hidden;
+        box-shadow: 0 0 16px rgba(0,0,0,.2);
+      }
+      #site-box{
+        margin:0 auto; 
+        display: block;  
+  
+      }
+      @media (max-width:47.999em) {
+        .m_hidden {
+          display: none;
+        }
+      }
+    </style>
+    <script>
+
+
+      var ClosePopup = function(){
+          $('.popup-fon').remove();
+      }
+
+      var Popup = function(content, param) {
+        var param = param ? param : {};
+        var popup = document.createElement('div');
+        popup.className = 'popup-fon';
+        popup.style.display = 'flex';
+        popup.style.position = 'fixed';
+        popup.style.zIndex = 99999;
+        popup.style.top = 0;
+        popup.style.right = 0;
+        popup.style.bottom = 0;
+        popup.style.left = 0;
+        popup.style.padding = '20px';
+        popup.style.overflowY = 'auto';
+        popup.style.backgroundColor = 'rgba(0,0,0,.5)';
+        var container = document.createElement('div');
+        container.style.margin = 'auto';
+        container.style.backgroundColor = '#fff';
+        if (param.class) container.classList.add(param.class);
+        if (param.background) container.style.backgroundColor = param.background;
+        if (param.radius) container.style.borderRadius = param.radius;
+        if (param.width) container.style.width = param.width;
+        if (param.padding) container.style.padding = param.padding;
+        popup.appendChild(container);
+        (typeof content === 'string') ? container.innerHTML = content : container.appendChild(content);
+        popup.addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.remove();
+                if (param.callback) param.callback();
+            }
+        });
+        document.body.appendChild(popup);
+        return popup;
+      }
+
+      var SiteBox = function(type){
+        var width = $(window).width();
+        var height = $(window).height();
+        switch(type){
+          case 'd': 
+            var w = '100%';
+            var h = height - 60;
+            var pt = 0;
+            $('#site-box').css({'border': '0px', 'border-radius': '0px'});
+          break;
+          case 't': 
+            var w = 768;
+            var h = 1024;
+            if(h > height - 60){h = height - 60;}
+            var pt = 0; 
+            $('#site-box').css({'border': '2px solid #333', 'border-radius': '3px'});
+          break;
+          case 'm': 
+            var w = 375;
+            var h = 667;
+            var pt = (height - h) /2 - 30;
+            $('#site-box').css({'border': '2px solid #333', 'border-radius': '3px'});
+          break;                   
+        }
+
+        $('#site-box').attr({'height':h, 'width':w}); 
+        $('#main').css({'padding-top':pt+'px'});   
+      }
+
+      $(document).ready(function(){
+        SiteBox('d');
+      });
+    </script>    
+  </body>
+
+
+</html>
